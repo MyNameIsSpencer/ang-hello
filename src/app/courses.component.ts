@@ -5,15 +5,40 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'courses',
   template: `
-    <button class="btn btn-primary" [class.active]="isActive">Save</button>
+    <input #email (keyup.enter) = "onKeyUp(email.value)" />
   `
 })
 
 export class CoursesComponent {
-  isActive = true;
+  onKeyUp(email) { console.log(email);
+  }
 }
 
 
+// template: `
+//   <input (keyup)="onKeyUp($event)" />
+// `
+// onKeyUp($event) { if ($event.keyCode === 13) console.log("You pressed the ENTER")}
+
+
+// template: `
+//   <div (click)="onDivClick()">
+//     <button (click)="onSave($event)">Save</button>
+//   </div>
+// `
+// export class CoursesComponent {
+//   onDivClick() { console.log( "Div Clicked" ); }
+//   onSave($event) {
+//     $event.stopPropagation();
+//     console.log( "Clickered", $event );
+//   }
+// }
+
+// template: `
+//   <button class="btn btn-primary" [class.active]="isActive">Save</button>
+// `
+//
+// isActive = true;
 
 
 // export class CoursesComponent {
