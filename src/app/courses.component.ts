@@ -2,17 +2,29 @@
 
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'courses',
-  template: `
-    <input #email (keyup.enter) = "onKeyUp(email.value)" />
-  `
-})
+// @Component({
+//   selector: 'courses',
+//   template: `
+//   `
+// })
+//
+// export class CoursesComponent {
+// }
 
-export class CoursesComponent {
-  onKeyUp(email) { console.log(email);
-  }
-}
+
+
+// email
+// @Component({
+//   selector: 'courses',
+//   template: `
+//     <input #email (keyup.enter) = "onKeyUp(email.value)" />
+//   `
+// })
+//
+// export class CoursesComponent {
+//   onKeyUp(email) { console.log(email);
+//   }
+// }
 
 
 // template: `
@@ -21,18 +33,23 @@ export class CoursesComponent {
 // onKeyUp($event) { if ($event.keyCode === 13) console.log("You pressed the ENTER")}
 
 
-// template: `
-//   <div (click)="onDivClick()">
-//     <button (click)="onSave($event)">Save</button>
-//   </div>
-// `
-// export class CoursesComponent {
-//   onDivClick() { console.log( "Div Clicked" ); }
-//   onSave($event) {
-//     $event.stopPropagation();
-//     console.log( "Clickered", $event );
-//   }
-// }
+
+@Component ({
+  selector: 'courses',
+  template: `
+    <div (click)="onDivClick()">
+      <button (click)="onSave($event)">Save</button>
+    </div>
+  `
+})
+
+export class CoursesComponent {
+  onDivClick() { console.log( "Div Clicked" ); }
+  onSave($event) {
+    $event.stopPropagation();
+    console.log( "Clickered", $event );
+  }
+}
 
 // template: `
 //   <button class="btn btn-primary" [class.active]="isActive">Save</button>
