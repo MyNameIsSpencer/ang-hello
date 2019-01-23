@@ -6,14 +6,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
-import { FavouriteComponent } from './favourite/favourite.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     CourseComponent,
-    FavouriteComponent
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
